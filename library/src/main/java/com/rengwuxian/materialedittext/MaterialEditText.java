@@ -457,10 +457,10 @@ public class MaterialEditText extends AppCompatEditText {
       resetHintTextColor();
       setText(text);
       setSelection(text.length());
-      floatingLabelFraction = 1;
+      floatingLabelFraction = 0.7f;
       floatingLabelShown = true;
     } else {
-      floatingLabelFraction = 0;
+      floatingLabelFraction = 0f;
       resetHintTextColor();
     }
     resetTextColor();
@@ -1251,7 +1251,7 @@ public class MaterialEditText extends AppCompatEditText {
 
   private ObjectAnimator getLabelAnimator() {
     if (labelAnimator == null) {
-      labelAnimator = ObjectAnimator.ofFloat(this, "floatingLabelFraction", 0f, 1f);
+      labelAnimator = ObjectAnimator.ofFloat(this, "floatingLabelFraction", 0f, 0.7f);
     }
     labelAnimator.setDuration(floatingLabelAnimating ? 300 : 0);
     return labelAnimator;
