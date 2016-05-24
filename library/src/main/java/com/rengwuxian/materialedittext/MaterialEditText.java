@@ -1382,6 +1382,7 @@ public class MaterialEditText extends AppCompatEditText {
       // calculate the alpha
       //int alpha = ((int) ((floatingLabelAlwaysShown ? 1 : floatingLabelFraction) * 0xff * (0.74f * focusFraction * (isEnabled() ? 1 : 0) + 0.26f) * (floatingLabelTextColor != -1 ? 1 : Color.alpha(floatingLabelTextColor) / 256f)));
       //textPaint.setAlpha(alpha);
+      textPaint.setAlpha(255);
 
       // draw the floating label
       canvas.drawText(floatingLabelText.toString(), floatingLabelStartX, floatingLabelStartY, textPaint);
